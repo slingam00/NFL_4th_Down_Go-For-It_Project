@@ -9,6 +9,16 @@ The [data](https://github.com/nflverse/nflfastR-data) comes from nflfastR which 
 ## League-Wide Go-For-It Rate in 4th and short opportunities
 I wanted to first re-create the plot that Michael Lopez tweeted out. I used data from the past 15 seasons starting from the 2007 season. I did this by isolating the data with 4th-and-1, 4th-and-2, and 4th-and-3 opportunies. I then grouped by season and took the probability of going-for-it by dividing the number of passes and runs over the total sum of fourth-and-short plays. I also subsetted the data using win probability in order to remove garbage time plays. Here is the final result:
 
+![](plots/Fourth_Down_Go_For_It_Rate_per_Season.png)
+
+## EPA/WPA plots
+
+![](plots/Fourth_and_Short_WPA_per_Season.png)
+
+![](plots/Fourth_and_Short_EPA_per_Season.png)
+
+## Team Fourth and Short Go For It Rate
+![](plots/go_for_it_nfl_fourth_down.PNG)
 
 ## References
 * [nflfastR website](https://www.nflfastr.com/)
