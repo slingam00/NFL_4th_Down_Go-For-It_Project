@@ -1,5 +1,9 @@
 # NFL_4th_Down_Go-For-It_Project
 
+## Medium Article
+
+An in-depth story of this project can be found [here](https://medium.com/deep-dives-with-data/go-for-it-why-nfl-teams-are-going-for-it-on-4th-downs-more-than-ever-ae07dce63b2a).
+
 ## Motivation
 As a football fan, I noticed a league-wide trend where it felt like more teams were going for it on 4th down. After the 2021 NFL regular season ended, I came across a [tweet](https://twitter.com/StatsbyLopez/status/1481096715235217413) from Michael Lopez who is the Director of Football Data and Analytics for the NFL. This sparked my interest in digging deeper into the numbers to find the league-wide trends in go-for-it rates. I wanted to also to find if there was a benefit to going-for-it in 4th and short situations as well as how often teams went for it in such situations in the 2021 season. Additionally, this gave me a great opportunity to work on my data visualization skills with interactive plots using plotly and plots with NFL team logos. 
 
