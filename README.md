@@ -7,12 +7,14 @@ As a football fan, I noticed a league-wide trend where it felt like more teams w
 The code written for this project can be found in this Jupyter Notebook:
 ```NFL 4th Down Go-For-It Project.ipynb```
 
+Additionally, ```nfl_team_logos.csv``` contains the team logos of every team and the plots can be found in the plots folder.
+
 ## Data
 The [data](https://github.com/nflverse/nflfastR-data) comes from nflfastR which has scraped NFL play-by-play data from the 1999 NFL season. Since I had no experience in working with nflfastR, I found a great Python tutorial from [@Deryck97](https://gist.github.com/Deryck97) which can be found [here](https://gist.github.com/Deryck97/dff8d33e9f841568201a2a0d5519ac5e).
 
 
 ## League-Wide Go-For-It Rate in 4th-and-Short opportunities
-I wanted to first re-create the plot that Michael Lopez tweeted out. I used data from the past 15 seasons starting from the 2007 season. I did this by isolating the data with 4th-and-1, 4th-and-2, and 4th-and-3 opportunies. I then grouped by season and took the probability of going-for-it by dividing the number of passes and runs over the total sum of fourth-and-short plays. I also subsetted the data using win probability in order to remove garbage time plays. Here is the final result and an interactive version of the plot can be found [here](https://chart-studio.plotly.com/~slingam00/36/#/):
+I wanted to first re-create the plot that Michael Lopez tweeted out. I used data from the past 15 seasons starting from the 2007 season. I did this by isolating the data with 4th-and-1, 4th-and-2, and 4th-and-3 opportunies. I then grouped by season and took the probability of going-for-it by dividing the number of passes and runs over the total sum of fourth-and-short plays. I also filtered the data using win probability in order to keep the plays in which the game is competitive at that point. Here is the final result and an interactive version of the plot can be found [here](https://chart-studio.plotly.com/~slingam00/36/#/):
 
 ![](plots/Fourth_Down_Go_For_It_Rate_per_Season.png)
 
@@ -20,7 +22,7 @@ We see a dramatic increase in teams going-for-it on 4th-and-1 in this past seaso
 
 ## WPA/EPA plots
 
-The next thing that I wanted to look at was if over these past fifteen seasons, were teams having success in going-for-it in these 4th-and-short situations where I describe 4th-and-short as 4th-and-3 and less. In order to calculate this, I used WPA (Win Probability Added) and Expected Points Added (EPA). WPA describes the amount in which a team's win probability in a game increased or decreased based on a given play. EPA is based on EP (Expected Points) which attempts to quantify the expected points of scoring based on a given down and distance since not all yards gained are the same. EPA measures how well a team performs relative to the expectation. From [The 33rd Team](https://www.the33rdteam.com/epa-explained/), "say the Chiefs start with the ball first-and-10 from their own 25-yard line, where its expected points would be about 1.06. If Patrick Mahomes throws a 15-yard completion, making it first-and-10 on the KC 40-yard line, where the expected points is now 1.88, the EPA of that play would be 1.88 – 1.06 or 0.82".
+The next thing that I wanted to look at was if over these past fifteen seasons, were teams having success in going-for-it in these 4th-and-short situations. In order to calculate this, I used WPA (Win Probability Added) and Expected Points Added (EPA). WPA describes the amount in which a team's win probability in a game increased or decreased based on a given play. EPA is based on EP (Expected Points) which attempts to quantify the expected points of scoring based on a given down and distance since not all yards gained are the same. EPA measures how well a team performs relative to the expectation. From [The 33rd Team](https://www.the33rdteam.com/epa-explained/), "say the Chiefs start with the ball first-and-10 from their own 25-yard line, where its expected points would be about 1.06. If Patrick Mahomes throws a 15-yard completion, making it first-and-10 on the KC 40-yard line, where the expected points is now 1.88, the EPA of that play would be 1.88 – 1.06 or 0.82".
 
 Given these two metrics, I took the median WPA and EPA per season of 4th-and-short plays and grouped by the different play types of pass, run, field goal, and punt. Here are the plots and the interactive versions can be found for [WPA](https://chart-studio.plotly.com/~slingam00/38/#/) and [EPA](https://chart-studio.plotly.com/~slingam00/38/#/).
 
@@ -36,12 +38,4 @@ The last thing that I wanted to do was find out how frequent teams went for it i
 
 ![](plots/go_for_it_nfl_fourth_down.PNG)
 
-As seen from the chart, the Indianapolis Colts went-for-it at the highest rate at about 68% of the time and the Seattle Seahawks went-for-it at the lowest rate at about 73% of the time. While teams are more aggressive than ever in going-for-it, there are still NFL teams that are far too conservative and costing their team valuable opportunities to increase their scoring opportunities and score given what the data suggests. In the future, it will be interesting to see how many NFL head coaches will be open to being more aggressive on 4th down. We've already seen Chargers Head Coach [Brandon Staley](https://www.youtube.com/watch?v=kLEoqnSe2kE) and Ravens Head Coach [John Harbaugh](https://www.youtube.com/watch?v=RszFYKsny1c) be accepting of using analytics in enhance their respective football teams' performance. The question is, will more head coaches do the same?
-## References
-* [nflfastR website](https://www.nflfastr.com/)
-* [nflfastR beginner guide](https://www.nflfastr.com/articles/beginners_guide.html#next-steps)
-* [nflfastR data](https://github.com/nflverse/nflfastR-data)
-* [@Deryck97](https://gist.github.com/Deryck97)  [nflfastR Python Guide](https://gist.github.com/Deryck97/dff8d33e9f841568201a2a0d5519ac5e)
-* [EPA](https://www.the33rdteam.com/epa-explained/)
-* [Plotly](https://plotly.com/python/)
-* [Plotly Line Charts](https://plotly.com/python/line-charts/)
+As seen from the chart, the Indianapolis Colts went-for-it at the highest rate at about 68% of the time and the Seattle Seahawks went-for-it at the lowest rate at about 15% of the time. While teams are more aggressive than ever in going-for-it, there are still NFL teams that are far too conservative and costing their team valuable opportunities to increase their scoring opportunities and score given what the data suggests. In the future, it will be interesting to see how many NFL head coaches will be open to being more aggressive on 4th down. We've already seen Chargers Head Coach [Brandon Staley](https://www.youtube.com/watch?v=kLEoqnSe2kE) and Ravens Head Coach [John Harbaugh](https://www.youtube.com/watch?v=RszFYKsny1c) be accepting of using analytics in enhance their respective football teams' performance. The question is, will more head coaches do the same?
